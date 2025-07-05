@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import "./globals.css";
-import Navbar from "./components/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Navbar from "./components/navbar";
 import Card from "./components/card";
+import Hero from "./components/hero";
 
-export default function Home() {
+export default function Page() {
   const [userdata, setUserData] = useState([]);
 
   const getData = async () => {
@@ -20,23 +21,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Hero />
+
       <h1 className=" text-pink-700 text-4xl font-bold px-15 py-7">
         Popular products
       </h1>
       <div className=" flex justify-center  flex-wrap items-center gap-6 py- px-5 text-2xl ">
-        {userdata.map((item, ind) => {
+        {userdata.map((item) => {
           return (
-            <>
-              <div>
-                <Card
-                  key={ind}
-                  title={item.title}
-                  photo={item.thumbnail}
-                  brand={item.brand}
-                  price={item.price}
-                />
-              </div>
-            </>
+            <div key={item.id}>
+              <Card
+                title={item.title}
+                photo={item.thumbnail}
+                brand={item.brand}
+                price={item.price}
+              />
+            </div>
           );
         })}
       </div>

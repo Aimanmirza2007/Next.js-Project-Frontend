@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex justify-between px-15 text-white py-4 items-center w-full ">
+      <div className="flex justify-between px-15 text-white py-5   items-center w-full fixed top-0 left-0 bg-gradient-to-l from-[#e280aa] via-purple-800   z-50   ">
         <div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-[#d8387d] via-purple-700 to-[#3582e7] bg-clip-text text-transparent">
             Shopping
@@ -37,9 +37,8 @@ function Navbar() {
           )}
         </div>
       </div>
-      <div className="w-full h-0.5 bg-gradient-to-r mt-5  from-[#cf1b69] via-purple-900 to-[#106de6]"></div>
       {toggle && (
-        <div className="fixed top-0 left-0 w-full h-90 z-50 sm:hidden backdrop-blur-md bg-white/10 text-pink-800 py-10 flex flex-col items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-90 z-50 sm:hidden backdrop-blur-md bg-black/10 text-pink-800 py-10 flex flex-col items-center justify-center">
           <ul className="flex flex-col gap-8 text-2xl font-bold items-center uppercase">
             <li>Home</li>
             <li>About</li>
