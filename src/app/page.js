@@ -6,8 +6,10 @@ import axios from "axios";
 import Navbar from "./components/navbar";
 import Card from "./components/card";
 import Hero from "./components/hero";
+import FeatureProducts from "./components/featureProducts";
 
 export default function Page() {
+  // Cards logic
   const [userdata, setUserData] = useState([]);
 
   const getData = async () => {
@@ -18,11 +20,18 @@ export default function Page() {
   useEffect(() => {
     getData();
   }, []);
+  // Cards logic
   return (
     <>
+      {/* Navbar */}
       <Navbar />
-      <Hero />
+      {/* Navbar */}
 
+      {/* Hero section */}
+      <Hero />
+      {/* Hero section */}
+
+      {/* Cards Section */}
       <h1 className=" text-pink-700 text-4xl font-bold px-15 py-7">
         Popular products
       </h1>
@@ -40,6 +49,10 @@ export default function Page() {
           );
         })}
       </div>
+      {/* Cards Section */}
+      {/* Feature Products section */}
+      <FeatureProducts />
+      {/* Feature Products section */}
     </>
   );
 }

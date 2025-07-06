@@ -3,7 +3,9 @@ import React from "react";
 const Hero = () => {
   return (
     <>
+      {/* Main div */}
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 mt-30 px-6 md:px-16 py-10">
+        {/* Left */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-pink-700">
             Premium Wireless Headphones
@@ -17,6 +19,8 @@ const Hero = () => {
             Shop Now
           </button>
         </div>
+        {/* Left*/}
+        {/* Right */}
         <div className="md:w-1/2 flex justify-center">
           <img
             src="/slide1.png"
@@ -24,7 +28,9 @@ const Hero = () => {
             className="w-full max-w-[400px] object-contain"
           />
         </div>
+        {/* Right*/}
       </div>
+      {/* Main div */}
     </>
   );
 };
