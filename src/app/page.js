@@ -7,6 +7,7 @@ import Navbar from "./components/navbar";
 import Card from "./components/card";
 import Hero from "./components/hero";
 import FeatureProducts from "./components/featureProducts";
+import Subscribe from "./components/subscribe";
 
 export default function Page() {
   // Cards logic
@@ -42,7 +43,7 @@ export default function Page() {
               <Card
                 title={item.title}
                 photo={item.thumbnail}
-                brand={item.brand}
+                rating={item.rating}
                 price={item.price}
               />
             </div>
@@ -53,6 +54,9 @@ export default function Page() {
       {/* Feature Products section */}
       <FeatureProducts />
       {/* Feature Products section */}
+      {/* Subscribe Section */}
+      <Subscribe />
+      {/* Subscribe Section */}
     </>
   );
 }
