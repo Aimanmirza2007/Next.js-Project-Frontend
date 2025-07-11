@@ -8,6 +8,8 @@ import Card from "./components/card";
 import Hero from "./components/hero";
 import FeatureProducts from "./components/featureProducts";
 import Subscribe from "./components/subscribe";
+import Footer from "./components/footer";
+import Link from "next/link";
 
 export default function Page() {
   // Cards logic
@@ -39,14 +41,16 @@ export default function Page() {
       <div className=" flex justify-center  flex-wrap items-center gap-6 py- px-5 text-2xl ">
         {userdata.map((item) => {
           return (
-            <div key={item.id}>
-              <Card
-                title={item.title}
-                photo={item.thumbnail}
-                rating={item.rating}
-                price={item.price}
-              />
-            </div>
+            <Link href={`/${item.id}`} key={item.id}>
+              <div>
+                <Card
+                  title={item.title}
+                  photo={item.thumbnail}
+                  rating={item.rating}
+                  price={item.price}
+                />
+              </div>
+            </Link>
           );
         })}
       </div>
@@ -57,6 +61,9 @@ export default function Page() {
       {/* Subscribe Section */}
       <Subscribe />
       {/* Subscribe Section */}
+      {/* Footer Section */}
+      <Footer />
+      {/* Footer Section */}
     </>
   );
 }

@@ -4,8 +4,8 @@ const Subscribe = () => {
   return (
     <>
       {/* Main div */}
-      {/* Upper Text */}
-      <div className="flex flex-col justify-center items-center pt-8 pb-14">
+      <div className="flex flex-col justify-center items-center pt-8 px-5 pb-14">
+        {/* Upper Text */}
         <h1 className="text-2xl md:text-4xl pb-3 text-pink-700 font-medium">
           Subscribe now & get 20% off
         </h1>
@@ -22,7 +22,7 @@ const Subscribe = () => {
             placeholder="Enter your email"
             className=" border border-white   px-3 outline-none  w-full rounded-md h-full text-pink-700"
           />
-          <button className="md:px-12 px-5  h-full text-white rounded-md  bg-pink-700 hover:bg-pink-800 transition  cursor-pointer">
+          <button className="md:px-12 px-3  h-full text-white rounded-md  bg-pink-700 hover:bg-pink-800 transition  cursor-pointer">
             Subscribe
           </button>
         </div>
