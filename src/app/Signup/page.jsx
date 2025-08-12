@@ -27,7 +27,7 @@ export default function SignupForm() {
 
     if (res.ok) {
       alert("Signup successful!");
-      router.push("/Login");
+      router.push("/");
     } else {
       alert(data.message || "Signup failed");
     }
