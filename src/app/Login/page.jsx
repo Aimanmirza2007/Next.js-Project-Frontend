@@ -18,6 +18,7 @@ export default function Login() {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(form),
       }
     );
